@@ -22,3 +22,6 @@ Logging demo
 - debug
 - warning
 - error
+
+Running docker through command line:
+`docker-compose -f docker-postgres.yml up`
