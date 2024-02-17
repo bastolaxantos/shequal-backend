@@ -2,18 +2,15 @@ package org.shequal.jobportal.service;
 
 import java.util.List;
 import org.shequal.jobportal.models.Job;
-import org.shequal.jobportal.repository.JobRepository;
-import org.springframework.stereotype.Service;
 
-@Service
-public class JobService {
-    private final JobRepository repository;
+public interface JobService {
+     List<Job> getAllJobs();
 
-    public JobService(JobRepository repository) {
-        this.repository = repository;
-    }
+     Job getJob(Long id);
 
-    public List<Job> getAllJobs() {
-        return repository.findAll();
-    }
+     Job createJob(Job job);
+
+     void deleteJob(Long id);
+
+     Job updateJob(Long id, Job job);
 }
